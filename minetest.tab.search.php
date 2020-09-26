@@ -50,7 +50,7 @@ else:
 		if($x == 0):
 			continue;
 		endif;
-		if(isset($cities[$x]['line_from'])):
+		if(isset($cities[$x]['line_station_from'])):
 			$via[] = $cities[$x]['name'];
 		endif;
 	endfor;
