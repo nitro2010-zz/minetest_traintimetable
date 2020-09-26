@@ -1,0 +1,251 @@
+{
+    "countries": {
+        "Germany": {
+            "map_img": "germany.png",
+            "locations": {
+                "Hamburg": {
+                    "map_x": 275,
+                    "map_y": 77
+                },
+                "Bremen": {
+                    "map_x": 205,
+                    "map_y": 107
+                },
+                "Berlin": {
+                    "map_x": 452,
+                    "map_y": 163
+                },
+                "Hannover": {
+                    "map_x": 262,
+                    "map_y": 168
+                },
+                "Dortmund": {
+                    "map_x": 139,
+                    "map_y": 238
+                },
+                "Cologne": {
+                    "map_x": 109,
+                    "map_y": 290
+                },
+                "Bonn": {
+                    "map_x": 116,
+                    "map_y": 318
+                },
+                "Frankfurt": {
+                    "map_x": 203,
+                    "map_y": 368
+                },
+                "Nurnberg": {
+                    "map_x": 333,
+                    "map_y": 427
+                },
+                "Stuttgart": {
+                    "map_x": 231,
+                    "map_y": 478
+                },
+                "Munich": {
+                    "map_x": 361,
+                    "map_y": 528
+                }
+            },
+            "paths": {
+                "Hamburg": {
+                    "Bremen": {
+                        "distance": "130"
+                    },
+                    "Hannover": {
+                        "distance": "170"
+                    },
+                    "Berlin": {
+                        "distance": "290"
+                    }
+                },
+                "Bremen": {
+                    "Hannover": {
+                        "distance": "140"
+                    }
+                },
+                "Berlin": {
+                    "Hannover": {
+                        "distance": "290"
+                    },
+                    "Nurnberg": {
+                        "distance": "440"
+                    }
+                },
+                "Hannover": {
+                    "Dortmund": {
+                        "distance": "210"
+                    },
+                    "Frankfurt": {
+                        "distance": "350"
+                    },
+                    "Nurnberg": {
+                        "distance": "470"
+                    }
+                },
+                "Dortmund": {
+                    "Cologne": {
+                        "distance": "90"
+                    }
+                },
+                "Cologne": {
+                    "Bonn": {
+                        "distance": "30"
+                    }
+                },
+                "Bonn": {
+                    "Frankfurt": {
+                        "distance": "160"
+                    }
+                },
+                "Frankfurt": {
+                    "Stuttgart": {
+                        "distance": "200"
+                    }
+                },
+                "Nurnberg": {
+                    "Stuttgart": {
+                        "distance": "30"
+                    },
+                    "Munich": {
+                        "distance": "170"
+                    }
+                },
+                "Stuttgart": {
+                    "Munich": {
+                        "distance": "240"
+                    }
+                }
+            }
+        },
+        "X": {
+            "map_img": "X.png",
+            "locations": {
+                "A": {
+                    "map_x": 57,
+                    "map_y": 473
+                },
+                "B": {
+                    "map_x": 423,
+                    "map_y": 303
+                },
+                "C": {
+                    "map_x": 272,
+                    "map_y": 470
+                },
+                "D": {
+                    "map_x": 426,
+                    "map_y": 415
+                },
+                "E": {
+                    "map_x": 423,
+                    "map_y": 527
+                },
+                "F": {
+                    "map_x": 559,
+                    "map_y": 468
+                },
+                "G": {
+                    "map_x": 284,
+                    "map_y": 588
+                },
+                "H": {
+                    "map_x": 423,
+                    "map_y": 660
+                },
+                "I": {
+                    "map_x": 557,
+                    "map_y": 661
+                },
+                "J": {
+                    "map_x": 740,
+                    "map_y": 465
+                },
+                "K": {
+                    "map_x": 970,
+                    "map_y": 462
+                }
+            },
+            "paths": {
+                "A": {
+                    "B": {
+                        "distance": "5"
+                    },
+                    "C": {
+                        "distance": "3"
+                    },
+                    "G": {
+                        "distance": "3"
+                    }
+                },
+                "B": {
+                    "F": {
+                        "distance": "3"
+                    },
+                    "J": {
+                        "distance": "5"
+                    },
+                    "K": {
+                        "distance": "2"
+                    }
+                },
+                "C": {
+                    "B": {
+                        "distance": "3"
+                    },
+                    "D": {
+                        "distance": "2"
+                    },
+                    "E": {
+                        "distance": "1"
+                    }
+                },
+                "D": {
+                    "F": {
+                        "distance": "2"
+                    }
+                },
+                "E": {
+                    "F": {
+                        "distance": "3"
+                    }
+                },
+                "F": {
+                    "I": {
+                        "distance": "2"
+                    },
+                    "J": {
+                        "distance": "3"
+                    }
+                },
+                "G": {
+                    "E": {
+                        "distance": "4"
+                    },
+                    "H": {
+                        "distance": "3"
+                    }
+                },
+                "H": {
+                    "I": {
+                        "distance": "2"
+                    }
+                },
+                "I": {
+                    "J": {
+                        "distance": "2"
+                    },
+                    "K": {
+                        "distance": "3"
+                    }
+                },
+                "J": {
+                    "K": {
+                        "distance": "7"
+                    }
+                }
+            }
+        }
+    }
+}

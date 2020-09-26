@@ -1,0 +1,28 @@
+{
+    "name": "algb12/graph-ds",
+    "description": "A fast implementation of the graph data-structure in PHP",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alex Gilburg",
+            "email": "algb12.19@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "GraphDS\\": "src",
+            "Tests\\": "tests"
+        }
+    },
+    "require": {
+        "php": ">=5.3.0",
+        "ext-dom": "*",
+        "ext-simplexml": "*"
+    },
+    "require-dev": {
+        "php": ">=5.4",
+        "phpunit/phpunit": "7.0.*",
+        "codeclimate/php-test-reporter": "^0.4.4"
+    }
+}

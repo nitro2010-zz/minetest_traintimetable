@@ -1,0 +1,6 @@
+{
+    "require": {
+        "ulrichsg/getopt-php": "^3.4",
+        "algb12/graph-ds": "^1.0"
+    }
+}

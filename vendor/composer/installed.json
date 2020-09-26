@@ -1,0 +1,140 @@
+[
+    {
+        "name": "abcaeffchen/sudoku-php",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/AbcAeffchen/sudoku-php.git",
+            "reference": "2802caa92a787428d749257116a23e15947202c9"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/AbcAeffchen/sudoku-php/zipball/2802caa92a787428d749257116a23e15947202c9",
+            "reference": "2802caa92a787428d749257116a23e15947202c9",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.5.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "4.8.*"
+        },
+        "time": "2016-03-26T13:40:52+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "AbcAeffchen\\sudoku\\": [
+                    "src/"
+                ]
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL v3.0"
+        ],
+        "authors": [
+            {
+                "name": "Alexander Schickedanz (AbcAeffchen)",
+                "email": "abcaeffchen@gmail.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "Generate random Sudokus of different size and difficulty and check the solution."
+    },
+    {
+        "name": "algb12/graph-ds",
+        "version": "1.0.9",
+        "version_normalized": "1.0.9.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/algb12/GraphDS.git",
+            "reference": "be91927b9b88aa83a4c261b908afc9dd4837956a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/algb12/GraphDS/zipball/be91927b9b88aa83a4c261b908afc9dd4837956a",
+            "reference": "be91927b9b88aa83a4c261b908afc9dd4837956a",
+            "shasum": ""
+        },
+        "require": {
+            "ext-dom": "*",
+            "ext-simplexml": "*",
+            "php": ">=5.3.0"
+        },
+        "require-dev": {
+            "codeclimate/php-test-reporter": "^0.4.4",
+            "php": ">=5.4",
+            "phpunit/phpunit": "7.0.*"
+        },
+        "time": "2019-03-31T03:03:30+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "GraphDS\\": "src",
+                "Tests\\": "tests"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Alex Gilburg",
+                "email": "algb12.19@gmail.com"
+            }
+        ],
+        "description": "A fast implementation of the graph data-structure in PHP"
+    },
+    {
+        "name": "ulrichsg/getopt-php",
+        "version": "v3.4.0",
+        "version_normalized": "3.4.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/getopt-php/getopt-php.git",
+            "reference": "9121d7c2c51a6a59ee407c49a13b4d8cfae71075"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/getopt-php/getopt-php/zipball/9121d7c2c51a6a59ee407c49a13b4d8cfae71075",
+            "reference": "9121d7c2c51a6a59ee407c49a13b4d8cfae71075",
+            "shasum": ""
+        },
+        "require": {
+            "ext-mbstring": "*",
+            "php": ">=5.4.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^4.8",
+            "squizlabs/php_codesniffer": "^2.7"
+        },
+        "time": "2020-07-14T06:09:04+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "GetOpt\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Ulrich Schmidt-Goertz",
+                "email": "ulrich@schmidt-goertz.de"
+            },
+            {
+                "name": "Thomas Flori",
+                "email": "thflori@gmail.com"
+            }
+        ],
+        "description": "Command line arguments parser for PHP 5.4 - 7.3",
+        "homepage": "http://getopt-php.github.io/getopt-php"
+    }
+]
