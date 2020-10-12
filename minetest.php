@@ -1,7 +1,7 @@
 <?php
 //CONFIGURATION
 define('MINETEST_ADVTRAINS_AVG_SPEED', 20);
-define('MINETEST_MAPSERVER', 'https://URL_TO_MAPSERVER');
+define('MINETEST_MAPSERVER', 'https://pandorabox.io/map');
 //SUPPORT DATABASES
 //MYSQL [pdo_mysql] - mysql:host=SERVER;port=PORT;dbname=DB_NAME
 //SQLITE [pdo_sqlite] - sqlite:PATH_TO_FILE.sqlite3
@@ -15,57 +15,6 @@ set_time_limit(60);
 ini_set('memory_limit', '512M');
 ////////////////////////////////////////////
 define('PHP_IS_INTERNAL_SCRIPT', 1);
-///////////////
-//WHEN PHP CALL ERROR [TIMEOUT] - EXECUTE CODE
-function shutdown()
-{
-	$a = error_get_last();
-	if ($a != null):
-		if(preg_match('/maximum execution time of [0-9]+ seconds exceeded/i', $a['message'])):
-?>
-
-<!doctype html>
-<html lang="en">
-	<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>MINETEST RAILWAY CONNECTIONS SEARCH ENGINE</title>
-	<link rel="stylesheet" href="css/jquery-ui.min.css">
-	<script src="js/jquery.js"></script>
-	<script src="js/jquery-ui.min.js"></script>
-	<script src="js/jquery.simplePagination.js"></script>
-	<script src="js/selectize.js"></script>
-	<link href="css/railway.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/selectize.bootstrap3.css" />	
-</head>
-<body>
-	<div id="tabs">
-		<ul>
-		<li><a href="#tabs-search">SEARCH</a></li>
-		<li><a href="#tabs-map">MAP</a></li>
-		<li><a href="#tabs-stats">STATS</a></li>
-		</ul>
-		<div id="tabs-search">
-		<?php
-			$nofound = 1;
-			@require_once('minetest.tab.search.php');
-		?>
-		</div>
-		<div id="tabs-map">
-		<iframe src="<?php echo MINETEST_MAPSERVER; ?>" width="100%" height="600" allow="fullscreen" style="border:none"></iframe>
-		</div>
-		<div id="tabs-stats">	
-			<?php @require_once('minetest.tab.stats.php'); ?>
-		</div>
-	</div>
-	</body>
-</html>
-<script src="js/railway.js"></script>	
-<?php
-		endif;
-	endif;
-}
-register_shutdown_function('shutdown');
 ////////////////////////////////////////////
 //LOAD DEPENDENCIES
 require_once('vendor/autoload.php');
@@ -124,6 +73,7 @@ function seconds2hms($seconds) {
 
 //IF USER CALL ACTION MAPSERVER
 if($getopt->getOption('action') == 'mapserver'):
+	set_time_limit(3600);
 	$overwrite = $getopt->getOption('overwrite');
 	try{
 		$pdo = new PDO(DB_CONNECTION, DB_LOGIN, DB_PASSWORD);	
@@ -270,6 +220,11 @@ if($getopt->getOption('action') == 'mapserver'):
 		foreach($ListLine as $number => $data):
 			$NumCities = count($data['city']);
 			for($i = 0; $i < $NumCities - 1; $i++):
+				echo "Try add: " . $data['city'][$i] . ' - ' . $data['city'][$i + 1] . "\n";
+				if($data['city'][$i] == $data['city'][$i + 1]):
+					echo "Duplicate cities... Ommit...\n";
+					continue;
+				endif;
 				$g->addEdge($data['city'][$i], $data['city'][$i + 1], 1);
 			endfor;
 		endforeach;
@@ -324,7 +279,7 @@ if($getopt->getOption('action') == 'mapserver'):
 				echo "Train line: " . $name . " (". $data['city'][$i] .") - ". $data['city'][$i + 1] ." was added to database \n";
 			endfor;
 		endforeach;
-	}catch(Exception $each){
+	}catch(Exception $e){
 		echo $e->getMessage() . "\n";
 	}
 	exit();
