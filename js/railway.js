@@ -8,7 +8,7 @@ $( "#tabs" ).tabs();
 var options = [];
 
 $.ajax({
-	url: 'minetest.php?action=getstations',
+	url: '?action=getstations',
 	method: 'GET',
 	dataType: 'json',
 	data: {},
